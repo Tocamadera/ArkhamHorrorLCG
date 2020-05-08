@@ -157,6 +157,7 @@ public class EditTeamActivity extends AppCompatActivity {
         final LinearLayout carcosaCheckboxes = findViewById(R.id.carcosa_investigators);
         final LinearLayout forgottenCheckboxes = findViewById(R.id.forgotten_investigators);
         final LinearLayout circleCheckboxes = findViewById(R.id.circle_investigators);
+        final LinearLayout dreamCheckboxes = findViewById(R.id.dream_investigators);
         final LinearLayout investigatorCheckboxes = findViewById(R.id.promo);
         LinearLayout normanCheckbox = findViewById(R.id.norman_promo);
         LinearLayout silasCheckbox = findViewById(R.id.silas_promo);
@@ -167,6 +168,7 @@ public class EditTeamActivity extends AppCompatActivity {
         final ImageView carcosaButton = findViewById(R.id.carcosa);
         final ImageView forgottenButton = findViewById(R.id.forgotten);
         final ImageView circleButton = findViewById(R.id.circle);
+        final ImageView dreamButton = findViewById(R.id.dream);
         final ImageView promo = findViewById(R.id.investigator);
         nightButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,6 +185,8 @@ public class EditTeamActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         dunwichButton.setOnClickListener(new View.OnClickListener() {
@@ -200,6 +204,8 @@ public class EditTeamActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         carcosaButton.setOnClickListener(new View.OnClickListener() {
@@ -217,6 +223,8 @@ public class EditTeamActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         forgottenButton.setOnClickListener(new View.OnClickListener() {
@@ -234,6 +242,8 @@ public class EditTeamActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         circleButton.setOnClickListener(new View.OnClickListener() {
@@ -251,6 +261,27 @@ public class EditTeamActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle_pressed);
                 circleCheckboxes.setVisibility(VISIBLE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
+            }
+        });
+        dreamButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nightButton.setImageResource(R.drawable.notz);
+                dunwichButton.setImageResource(R.drawable.dunwich);
+                carcosaButton.setImageResource(R.drawable.carcosa);
+                forgottenButton.setImageResource(R.drawable.forgotten);
+                promo.setImageResource(R.drawable.investigator);
+                coreCheckboxes.setVisibility(GONE);
+                dunwichCheckboxes.setVisibility(GONE);
+                carcosaCheckboxes.setVisibility(GONE);
+                forgottenCheckboxes.setVisibility(GONE);
+                investigatorCheckboxes.setVisibility(GONE);
+                circleButton.setImageResource(R.drawable.circle);
+                circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream_pressed);
+                dreamCheckboxes.setVisibility(VISIBLE);
             }
         });
         promo.setOnClickListener(new View.OnClickListener() {
@@ -268,6 +299,8 @@ public class EditTeamActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(VISIBLE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
 
@@ -301,6 +334,12 @@ public class EditTeamActivity extends AppCompatActivity {
                 ((CheckBox) view).setTypeface(arnopro);
             }
         }
+        for (int i = 0; i < dreamCheckboxes.getChildCount(); i++) {
+            View view = dreamCheckboxes.getChildAt(i);
+            if (view instanceof CheckBox) {
+                ((CheckBox) view).setTypeface(arnopro);
+            }
+        }
         for (int i = 0; i < normanCheckbox.getChildCount(); i++) {
             View view = normanCheckbox.getChildAt(i);
             if (view instanceof CheckBox) {
@@ -320,6 +359,7 @@ public class EditTeamActivity extends AppCompatActivity {
         String carcosaOwnedString = getResources().getString(R.string.carcosa_setting);
         String forgottenOwnedString = getResources().getString(R.string.forgotten_setting);
         String circleOwnedString = getResources().getString(R.string.circle_setting);
+        String dreamOwnedString = getResources().getString(R.string.dream_setting);
         String normanOwnedString = getResources().getString(R.string.norman_withers);
         String silasOwnedString = getResources().getString(R.string.silas_marsh);
         SharedPreferences settings = getSharedPreferences(sharedPrefs, 0);
@@ -327,6 +367,7 @@ public class EditTeamActivity extends AppCompatActivity {
         boolean carcosaOwned = settings.getBoolean(carcosaOwnedString, true);
         boolean forgottenOwned = settings.getBoolean(forgottenOwnedString, true);
         boolean circleOwned = settings.getBoolean(circleOwnedString, true);
+        boolean dreamOwned = settings.getBoolean(dreamOwnedString, true);
         boolean normanOwned = settings.getBoolean(normanOwnedString, false);
         boolean silasOwned = settings.getBoolean(silasOwnedString, false);
 
@@ -336,6 +377,7 @@ public class EditTeamActivity extends AppCompatActivity {
         int carcosa = 0;
         int forgotten = 0;
         int circle = 0;
+        int dream = 0;
         int norman = 0;
         int silas = 0;
 
@@ -568,6 +610,50 @@ public class EditTeamActivity extends AppCompatActivity {
         if (circle == 6 || !circleOwned) {
             circleCheckboxes.setVisibility(GONE);
             circleButton.setVisibility(GONE);
+        }
+
+        // Setup checkboxes for Dream investigators
+        if (dreamOwned) {
+            if (globalVariables.InvestigatorsInUse[Investigator.TOMMY_MULDOON] == 0) {
+                CheckBox tommy = findViewById(R.id.tommy_muldoon);
+                tommy.setVisibility(VISIBLE);
+                tommy.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
+            } else {
+                dream++;
+            }
+            if (globalVariables.InvestigatorsInUse[Investigator.MANDY_THOMPSON] == 0) {
+                CheckBox mandy = findViewById(R.id.mandy_thompson);
+                mandy.setVisibility(VISIBLE);
+                mandy.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
+            } else {
+                dream++;
+            }
+            if (globalVariables.InvestigatorsInUse[Investigator.TONY_MORGAN] == 0) {
+                CheckBox tony = findViewById(R.id.tony_morgan);
+                tony.setVisibility(VISIBLE);
+                tony.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
+            } else {
+                dream++;
+            }
+            if (globalVariables.InvestigatorsInUse[Investigator.LUKE_ROBINSON] == 0) {
+                CheckBox luke = findViewById(R.id.luke_robinson);
+                luke.setVisibility(VISIBLE);
+                luke.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
+            } else {
+                dream++;
+            }
+            if (globalVariables.InvestigatorsInUse[Investigator.PATRICE_HATHAWAY] == 0) {
+                CheckBox patrice = findViewById(R.id.patrice_hathaway);
+                patrice.setVisibility(VISIBLE);
+                patrice.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
+            } else {
+                dream++;
+            }
+        }
+        // Hide LinearLayout if all Dream investigators are dead or if dream is not owned
+        if (dream == 5 || !dreamOwned) {
+            dreamCheckboxes.setVisibility(GONE);
+            dreamButton.setVisibility(GONE);
         }
 
         boolean promoCheck = false;
@@ -1108,6 +1194,86 @@ public class EditTeamActivity extends AppCompatActivity {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
                             if (globalVariables.InvestigatorNames.get(i) == Investigator.RITA_YOUNG) {
+                                removeInvestigator = i;
+                                globalVariables.InvestigatorNames.remove(i);
+                            }
+                        }
+                    }
+                    break;
+                case R.id.tommy_muldoon:
+                    if (isChecked && investigatorsCount < 4) {
+                        globalVariables.InvestigatorNames.add(Investigator.TOMMY_MULDOON);
+                        investigatorsCount++;
+                    } else if (isChecked) {
+                        buttonView.setChecked(false);
+                    } else {
+                        investigatorsCount--;
+                        for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.TOMMY_MULDOON) {
+                                removeInvestigator = i;
+                                globalVariables.InvestigatorNames.remove(i);
+                            }
+                        }
+                    }
+                    break;
+                case R.id.mandy_thompson:
+                    if (isChecked && investigatorsCount < 4) {
+                        globalVariables.InvestigatorNames.add(Investigator.MANDY_THOMPSON);
+                        investigatorsCount++;
+                    } else if (isChecked) {
+                        buttonView.setChecked(false);
+                    } else {
+                        investigatorsCount--;
+                        for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.MANDY_THOMPSON) {
+                                removeInvestigator = i;
+                                globalVariables.InvestigatorNames.remove(i);
+                            }
+                        }
+                    }
+                    break;
+                case R.id.tony_morgan:
+                    if (isChecked && investigatorsCount < 4) {
+                        globalVariables.InvestigatorNames.add(Investigator.TONY_MORGAN);
+                        investigatorsCount++;
+                    } else if (isChecked) {
+                        buttonView.setChecked(false);
+                    } else {
+                        investigatorsCount--;
+                        for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.TONY_MORGAN) {
+                                removeInvestigator = i;
+                                globalVariables.InvestigatorNames.remove(i);
+                            }
+                        }
+                    }
+                    break;
+                case R.id.luke_robinson:
+                    if (isChecked && investigatorsCount < 4) {
+                        globalVariables.InvestigatorNames.add(Investigator.LUKE_ROBINSON);
+                        investigatorsCount++;
+                    } else if (isChecked) {
+                        buttonView.setChecked(false);
+                    } else {
+                        investigatorsCount--;
+                        for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.LUKE_ROBINSON) {
+                                removeInvestigator = i;
+                                globalVariables.InvestigatorNames.remove(i);
+                            }
+                        }
+                    }
+                    break;
+                case R.id.patrice_hathaway:
+                    if (isChecked && investigatorsCount < 4) {
+                        globalVariables.InvestigatorNames.add(Investigator.PATRICE_HATHAWAY);
+                        investigatorsCount++;
+                    } else if (isChecked) {
+                        buttonView.setChecked(false);
+                    } else {
+                        investigatorsCount--;
+                        for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.PATRICE_HATHAWAY) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }

@@ -166,6 +166,7 @@ public class SettingsMenuActivity extends AppCompatActivity {
         boolean carcosaOwned;
         boolean forgottenOwned;
         boolean circleOwned;
+        boolean dreamOwned;
         boolean normanOwned;
         boolean silasOwned;
         SharedPreferences settings;
@@ -173,6 +174,7 @@ public class SettingsMenuActivity extends AppCompatActivity {
         String carcosaOwnedString;
         String forgottenOwnedString;
         String circleOwnedString;
+        String dreamOwnedString;
         String normanOwnedString;
         String silasOwnedString;
         String sharedPrefs;
@@ -185,6 +187,7 @@ public class SettingsMenuActivity extends AppCompatActivity {
             carcosaOwnedString = getActivity().getResources().getString(R.string.carcosa_setting);
             forgottenOwnedString = getActivity().getResources().getString(R.string.forgotten_setting);
             circleOwnedString = getActivity().getResources().getString(R.string.circle_setting);
+            dreamOwnedString = "Dream settings";
             normanOwnedString = getActivity().getResources().getString(R.string.norman_withers);
             silasOwnedString = getActivity().getResources().getString(R.string.silas_marsh);
             settings = getActivity().getSharedPreferences(sharedPrefs, 0);
@@ -192,6 +195,7 @@ public class SettingsMenuActivity extends AppCompatActivity {
             carcosaOwned = settings.getBoolean(carcosaOwnedString, true);
             forgottenOwned = settings.getBoolean(forgottenOwnedString, true);
             circleOwned = settings.getBoolean(circleOwnedString, true);
+            dreamOwned = settings.getBoolean(dreamOwnedString, true);
             normanOwned = settings.getBoolean(normanOwnedString, false);
             silasOwned = settings.getBoolean(silasOwnedString, false);
 
@@ -204,12 +208,14 @@ public class SettingsMenuActivity extends AppCompatActivity {
             final CheckBox carcosa = v.findViewById(R.id.carcosa_owned);
             final CheckBox forgotten = v.findViewById(R.id.forgotten_owned);
             final CheckBox circle = v.findViewById(R.id.circle_owned);
+            final CheckBox dream = v.findViewById(R.id.dream_owned);
             final CheckBox norman = v.findViewById(R.id.norman_xpac);
             final CheckBox silas = v.findViewById(R.id.silas_xpac);
             dunwich.setChecked(dunwichOwned);
             carcosa.setChecked(carcosaOwned);
             forgotten.setChecked(forgottenOwned);
             circle.setChecked(circleOwned);
+            dream.setChecked(dreamOwned);
             norman.setChecked(normanOwned);
             silas.setChecked(silasOwned);
 
@@ -219,6 +225,7 @@ public class SettingsMenuActivity extends AppCompatActivity {
             carcosa.setTypeface(arnopro);
             forgotten.setTypeface(arnopro);
             circle.setTypeface(arnopro);
+            dream.setTypeface(arnopro);
             norman.setTypeface(arnopro);
             silas.setTypeface(arnopro);
             Typeface teutonic = Typeface.createFromAsset(getActivity().getAssets(), "fonts/teutonic.ttf");
@@ -239,6 +246,7 @@ public class SettingsMenuActivity extends AppCompatActivity {
                     editor.putBoolean(carcosaOwnedString, carcosa.isChecked());
                     editor.putBoolean(forgottenOwnedString, forgotten.isChecked());
                     editor.putBoolean(circleOwnedString, circle.isChecked());
+                    editor.putBoolean(dreamOwnedString, dream.isChecked());
                     editor.putBoolean(normanOwnedString, norman.isChecked());
                     editor.putBoolean(silasOwnedString, silas.isChecked());
                     editor.apply();

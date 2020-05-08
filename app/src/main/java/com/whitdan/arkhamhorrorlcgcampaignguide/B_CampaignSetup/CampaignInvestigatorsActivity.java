@@ -94,6 +94,9 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
             case 5:
                 title.setText(R.string.circle_campaign);
                 break;
+            case 6:
+                title.setText(R.string.dream_campaign);
+                break;
         }
 
         // Set fonts to relevant elements
@@ -114,6 +117,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         final LinearLayout carcosaCheckboxes = findViewById(R.id.carcosa_investigators);
         final LinearLayout forgottenCheckboxes = findViewById(R.id.forgotten_investigators);
         final LinearLayout circleCheckboxes = findViewById(R.id.circle_investigators);
+        final LinearLayout dreamCheckboxes = findViewById(R.id.dream_investigators);
         final LinearLayout investigatorCheckboxes = findViewById(R.id.promo);
         LinearLayout normanCheckbox = findViewById(R.id.norman_promo);
         LinearLayout silasCheckbox = findViewById(R.id.silas_promo);
@@ -124,6 +128,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         final ImageView carcosaButton = findViewById(R.id.carcosa);
         final ImageView forgottenButton = findViewById(R.id.forgotten);
         final ImageView circleButton = findViewById(R.id.circle);
+        final ImageView dreamButton = findViewById(R.id.dream);
         final ImageView promo = findViewById(R.id.investigator);
         nightButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +145,8 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         dunwichButton.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +164,8 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         carcosaButton.setOnClickListener(new View.OnClickListener() {
@@ -174,6 +183,8 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         forgottenButton.setOnClickListener(new View.OnClickListener() {
@@ -191,6 +202,8 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
         circleButton.setOnClickListener(new View.OnClickListener() {
@@ -208,6 +221,27 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(GONE);
                 circleButton.setImageResource(R.drawable.circle_pressed);
                 circleCheckboxes.setVisibility(VISIBLE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
+            }
+        });
+        dreamButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nightButton.setImageResource(R.drawable.notz);
+                dunwichButton.setImageResource(R.drawable.dunwich);
+                carcosaButton.setImageResource(R.drawable.carcosa);
+                forgottenButton.setImageResource(R.drawable.forgotten);
+                promo.setImageResource(R.drawable.investigator);
+                coreCheckboxes.setVisibility(GONE);
+                dunwichCheckboxes.setVisibility(GONE);
+                carcosaCheckboxes.setVisibility(GONE);
+                forgottenCheckboxes.setVisibility(GONE);
+                investigatorCheckboxes.setVisibility(GONE);
+                circleButton.setImageResource(R.drawable.circle);
+                circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream_pressed);
+                dreamCheckboxes.setVisibility(VISIBLE);
             }
         });
         promo.setOnClickListener(new View.OnClickListener() {
@@ -225,6 +259,8 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 investigatorCheckboxes.setVisibility(VISIBLE);
                 circleButton.setImageResource(R.drawable.circle);
                 circleCheckboxes.setVisibility(GONE);
+                dreamButton.setImageResource(R.drawable.dream);
+                dreamCheckboxes.setVisibility(GONE);
             }
         });
 
@@ -234,6 +270,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         String carcosaOwnedString = getResources().getString(R.string.carcosa_setting);
         String forgottenOwnedString = getResources().getString(R.string.forgotten_setting);
         String circleOwnedString = getResources().getString(R.string.circle_setting);
+        String dreamOwnedString = getResources().getString(R.string.dream_setting);
         String normanOwnedString = getResources().getString(R.string.norman_withers);
         String silasOwnedString = getResources().getString(R.string.silas_marsh);
         SharedPreferences settings = getSharedPreferences(sharedPrefs, 0);
@@ -241,6 +278,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         boolean carcosaOwned = settings.getBoolean(carcosaOwnedString, true);
         boolean forgottenOwned = settings.getBoolean(forgottenOwnedString, true);
         boolean circleOwned = settings.getBoolean(circleOwnedString, true);
+        boolean dreamOwned = settings.getBoolean(dreamOwnedString, true);
         boolean normanOwned = settings.getBoolean(normanOwnedString, false);
         boolean silasOwned = settings.getBoolean(silasOwnedString, false);
         if (!dunwichOwned) {
@@ -258,6 +296,10 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         if(!circleOwned) {
             circleCheckboxes.setVisibility(GONE);
             circleButton.setVisibility(GONE);
+        }
+        if(!dreamOwned) {
+            dreamCheckboxes.setVisibility(GONE);
+            dreamButton.setVisibility(GONE);
         }
         boolean promoCount = false;
         if (!normanOwned) {
@@ -302,6 +344,13 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         }
         for (int i = 0; i < circleCheckboxes.getChildCount(); i++) {
             View view = circleCheckboxes.getChildAt(i);
+            if (view instanceof CheckBox) {
+                ((CheckBox) view).setTypeface(arnopro);
+                ((CheckBox) view).setOnCheckedChangeListener(new InvestigatorCheckboxListener());
+            }
+        }
+        for (int i = 0; i < dreamCheckboxes.getChildCount(); i++) {
+            View view = dreamCheckboxes.getChildAt(i);
             if (view instanceof CheckBox) {
                 ((CheckBox) view).setTypeface(arnopro);
                 ((CheckBox) view).setOnCheckedChangeListener(new InvestigatorCheckboxListener());
@@ -867,6 +916,86 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                             }
                         }
                         break;
+                    case R.id.tommy_muldoon:
+                        if (isChecked && investigators < 4) {
+                            globalVariables.InvestigatorNames.add(Investigator.TOMMY_MULDOON);
+                            investigators++;
+                        } else if (isChecked) {
+                            buttonView.setChecked(false);
+                        } else {
+                            investigators--;
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.TOMMY_MULDOON) {
+                                    removeInvestigator = i;
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                    case R.id.mandy_thompson:
+                        if (isChecked && investigators < 4) {
+                            globalVariables.InvestigatorNames.add(Investigator.MANDY_THOMPSON);
+                            investigators++;
+                        } else if (isChecked) {
+                            buttonView.setChecked(false);
+                        } else {
+                            investigators--;
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.MANDY_THOMPSON) {
+                                    removeInvestigator = i;
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                    case R.id.tony_morgan:
+                        if (isChecked && investigators < 4) {
+                            globalVariables.InvestigatorNames.add(Investigator.TONY_MORGAN);
+                            investigators++;
+                        } else if (isChecked) {
+                            buttonView.setChecked(false);
+                        } else {
+                            investigators--;
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.TONY_MORGAN) {
+                                    removeInvestigator = i;
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                    case R.id.luke_robinson:
+                        if (isChecked && investigators < 4) {
+                            globalVariables.InvestigatorNames.add(Investigator.LUKE_ROBINSON);
+                            investigators++;
+                        } else if (isChecked) {
+                            buttonView.setChecked(false);
+                        } else {
+                            investigators--;
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.LUKE_ROBINSON) {
+                                    removeInvestigator = i;
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                    case R.id.patrice_hathaway:
+                        if (isChecked && investigators < 4) {
+                            globalVariables.InvestigatorNames.add(Investigator.PATRICE_HATHAWAY);
+                            investigators++;
+                        } else if (isChecked) {
+                            buttonView.setChecked(false);
+                        } else {
+                            investigators--;
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.PATRICE_HATHAWAY) {
+                                    removeInvestigator = i;
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
                 }
             }
 
@@ -1405,6 +1534,16 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 .DIANA_STANLEY]);
         campaignValues.put(CampaignEntry.COLUMN_RITA_INUSE, globalVariables.InvestigatorsInUse[Investigator
                 .RITA_YOUNG]);
+        campaignValues.put(CampaignEntry.COLUMN_TOMMY_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .TOMMY_MULDOON]);
+        campaignValues.put(CampaignEntry.COLUMN_MANDY_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .MANDY_THOMPSON]);
+        campaignValues.put(CampaignEntry.COLUMN_TONY_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .TONY_MORGAN]);
+        campaignValues.put(CampaignEntry.COLUMN_LUKE_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .LUKE_ROBINSON]);
+        campaignValues.put(CampaignEntry.COLUMN_PATRICE_HATHAWAY, globalVariables.InvestigatorsInUse[Investigator
+                .PATRICE_HATHAWAY]);
         long newCampaignId = db.insert(CampaignEntry.TABLE_NAME, null, campaignValues);
         globalVariables.CampaignID = newCampaignId;
 
