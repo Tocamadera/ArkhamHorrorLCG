@@ -453,6 +453,16 @@ public class LoadCampaignActivity extends AppCompatActivity {
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_PRESTON_INUSE));
                 globalVariables.InvestigatorsInUse[Investigator.RITA_YOUNG] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_RITA_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.TOMMY_MULDOON] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_TOMMY_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.MANDY_THOMPSON] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_MANDY_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.TONY_MORGAN] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_TONY_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.LUKE_ROBINSON] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_LUKE_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.PATRICE_HATHAWAY] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_PATRICE_HATHAWAY));
                 globalVariables.InvestigatorsInUse[Investigator.DIANA_STANLEY] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_DIANA_INUSE));
                 globalVariables.Rougarou = (campaignCursor.getInt(campaignCursor.getColumnIndexOrThrow
