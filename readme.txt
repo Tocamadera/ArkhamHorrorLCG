@@ -13,7 +13,7 @@ This is an Android app for Arkham Horror LCG that serves as a campaign guide.
  - Campaigns - 
  Dunwich:Yes
  Carcosa:Yes
- Forgotten Age: Yes
+ Forgotten Age: 50%?
  Circle Undone: No
  Dream-Eaters: No
  Innsmouth: No
