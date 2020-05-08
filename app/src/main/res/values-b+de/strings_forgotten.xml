@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="forgotten_campaign">Das vergessene Zeitalter (Beta)</string>
+    <string name="forgotten_campaign">Das vergessene Zeitalter</string>
     <string name="forgotten_scenario_one">Szenario 1: Die ungezähmte Wildnis</string>
     <string name="forgotten_scenario_two">Szenario 2: Das Verderben von Eztli</string>
     <string name="forgotten_scenario_three">Szenario 3: Fäden des Schicksals</string>

@@ -182,6 +182,11 @@
         <item>Preston Fairmont</item>
         <item>Diana Stanley</item>
         <item>Rita Young</item>
+        <item>Tommy Muldoon</item>
+        <item>Mandy Thompson</item>
+        <item>Tony Morgan</item>
+        <item>Luke Robinson</item>
+        <item>Patrice Hathaway</item>
     </string-array>
     <string name="roland_banks">Roland Banks</string>
     <string name="daisy_walker">Daisy Walker</string>
@@ -201,6 +206,22 @@
     <string name="lola_hayes">Lola Hayes</string>
     <string name="marie_lambeau">Marie Lambeau</string>
     <string name="norman_withers">Norman Withers</string>
+    <string name="carolyn_fern">Carolyn Fern</string>
+    <string name="silas_marsh">Silas Marsh</string>
+    <string name="leo_anderson">Leo Anderson</string>
+    <string name="ursula_downs">Ursula Downs</string>
+    <string name="finn_edwards">Finn Edwards</string>
+    <string name="father_mateo">Father Mateo</string>
+    <string name="calvin_wright">Calvin Wright</string>
+    <string name="joe_diamond">Joe Diamond</string>
+    <string name="preston_fairmont">Preston Fairmont</string>
+    <string name="diana_stanley">Diana Stanley</string>
+    <string name="rita_young">Rita Young</string>
+    <string name="tommy_muldoon">Tommy Muldoon</string>
+    <string name="mandy_thompson">Mandy Thompson</string>
+    <string name="tony_morgan">Tony Morgan</string>
+    <string name="luke_robinson">Luke Robinson</string>
+    <string name="patrice_hathaway">Patrice Hathaway</string>
 
     <string name="cover_up">Insabbiamento non risolto in gioco</string>
     <string name="hospital_debts">Debiti Ospedalieri non risolta in gioco</string>
