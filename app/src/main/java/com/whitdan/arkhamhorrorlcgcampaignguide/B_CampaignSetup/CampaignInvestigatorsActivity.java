@@ -130,188 +130,208 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         final ImageView circleButton = findViewById(R.id.circle);
         final ImageView dreamButton = findViewById(R.id.dream);
         final ImageView promo = findViewById(R.id.investigator);
-        nightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nightButton.setImageResource(R.drawable.notz_pressed);
-                dunwichButton.setImageResource(R.drawable.dunwich);
-                carcosaButton.setImageResource(R.drawable.carcosa);
-                forgottenButton.setImageResource(R.drawable.forgotten);
-                promo.setImageResource(R.drawable.investigator);
-                coreCheckboxes.setVisibility(VISIBLE);
-                dunwichCheckboxes.setVisibility(GONE);
-                carcosaCheckboxes.setVisibility(GONE);
-                forgottenCheckboxes.setVisibility(GONE);
-                investigatorCheckboxes.setVisibility(GONE);
-                circleButton.setImageResource(R.drawable.circle);
-                circleCheckboxes.setVisibility(GONE);
-                dreamButton.setImageResource(R.drawable.dream);
-                dreamCheckboxes.setVisibility(GONE);
-            }
-        });
-        dunwichButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nightButton.setImageResource(R.drawable.notz);
-                dunwichButton.setImageResource(R.drawable.dunwich_pressed);
-                carcosaButton.setImageResource(R.drawable.carcosa);
-                forgottenButton.setImageResource(R.drawable.forgotten);
-                promo.setImageResource(R.drawable.investigator);
-                coreCheckboxes.setVisibility(GONE);
-                dunwichCheckboxes.setVisibility(VISIBLE);
-                carcosaCheckboxes.setVisibility(GONE);
-                forgottenCheckboxes.setVisibility(GONE);
-                investigatorCheckboxes.setVisibility(GONE);
-                circleButton.setImageResource(R.drawable.circle);
-                circleCheckboxes.setVisibility(GONE);
-                dreamButton.setImageResource(R.drawable.dream);
-                dreamCheckboxes.setVisibility(GONE);
-            }
-        });
-        carcosaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nightButton.setImageResource(R.drawable.notz);
-                dunwichButton.setImageResource(R.drawable.dunwich);
-                carcosaButton.setImageResource(R.drawable.carcosa_pressed);
-                forgottenButton.setImageResource(R.drawable.forgotten);
-                promo.setImageResource(R.drawable.investigator);
-                coreCheckboxes.setVisibility(GONE);
-                dunwichCheckboxes.setVisibility(GONE);
-                carcosaCheckboxes.setVisibility(VISIBLE);
-                forgottenCheckboxes.setVisibility(GONE);
-                investigatorCheckboxes.setVisibility(GONE);
-                circleButton.setImageResource(R.drawable.circle);
-                circleCheckboxes.setVisibility(GONE);
-                dreamButton.setImageResource(R.drawable.dream);
-                dreamCheckboxes.setVisibility(GONE);
-            }
-        });
-        forgottenButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nightButton.setImageResource(R.drawable.notz);
-                dunwichButton.setImageResource(R.drawable.dunwich);
-                carcosaButton.setImageResource(R.drawable.carcosa);
-                forgottenButton.setImageResource(R.drawable.forgotten_pressed);
-                promo.setImageResource(R.drawable.investigator);
-                coreCheckboxes.setVisibility(GONE);
-                dunwichCheckboxes.setVisibility(GONE);
-                carcosaCheckboxes.setVisibility(GONE);
-                forgottenCheckboxes.setVisibility(VISIBLE);
-                investigatorCheckboxes.setVisibility(GONE);
-                circleButton.setImageResource(R.drawable.circle);
-                circleCheckboxes.setVisibility(GONE);
-                dreamButton.setImageResource(R.drawable.dream);
-                dreamCheckboxes.setVisibility(GONE);
-            }
-        });
-        circleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nightButton.setImageResource(R.drawable.notz);
-                dunwichButton.setImageResource(R.drawable.dunwich);
-                carcosaButton.setImageResource(R.drawable.carcosa);
-                forgottenButton.setImageResource(R.drawable.forgotten);
-                promo.setImageResource(R.drawable.investigator);
-                coreCheckboxes.setVisibility(GONE);
-                dunwichCheckboxes.setVisibility(GONE);
-                carcosaCheckboxes.setVisibility(GONE);
-                forgottenCheckboxes.setVisibility(GONE);
-                investigatorCheckboxes.setVisibility(GONE);
-                circleButton.setImageResource(R.drawable.circle_pressed);
-                circleCheckboxes.setVisibility(VISIBLE);
-                dreamButton.setImageResource(R.drawable.dream);
-                dreamCheckboxes.setVisibility(GONE);
-            }
-        });
-        dreamButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nightButton.setImageResource(R.drawable.notz);
-                dunwichButton.setImageResource(R.drawable.dunwich);
-                carcosaButton.setImageResource(R.drawable.carcosa);
-                forgottenButton.setImageResource(R.drawable.forgotten);
-                promo.setImageResource(R.drawable.investigator);
-                coreCheckboxes.setVisibility(GONE);
-                dunwichCheckboxes.setVisibility(GONE);
-                carcosaCheckboxes.setVisibility(GONE);
-                forgottenCheckboxes.setVisibility(GONE);
-                investigatorCheckboxes.setVisibility(GONE);
-                circleButton.setImageResource(R.drawable.circle);
-                circleCheckboxes.setVisibility(GONE);
-                dreamButton.setImageResource(R.drawable.dream_pressed);
-                dreamCheckboxes.setVisibility(VISIBLE);
-            }
-        });
-        promo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nightButton.setImageResource(R.drawable.notz);
-                dunwichButton.setImageResource(R.drawable.dunwich);
-                carcosaButton.setImageResource(R.drawable.carcosa);
-                forgottenButton.setImageResource(R.drawable.forgotten);
-                promo.setImageResource(R.drawable.investigator_pressed);
-                coreCheckboxes.setVisibility(GONE);
-                dunwichCheckboxes.setVisibility(GONE);
-                carcosaCheckboxes.setVisibility(GONE);
-                forgottenCheckboxes.setVisibility(GONE);
-                investigatorCheckboxes.setVisibility(VISIBLE);
-                circleButton.setImageResource(R.drawable.circle);
-                circleCheckboxes.setVisibility(GONE);
-                dreamButton.setImageResource(R.drawable.dream);
-                dreamCheckboxes.setVisibility(GONE);
-            }
-        });
-
-        // Hide investigators if expansion isn't owned
-        String sharedPrefs = getResources().getString(R.string.shared_prefs);
-        String dunwichOwnedString = getResources().getString(R.string.dunwich_setting);
-        String carcosaOwnedString = getResources().getString(R.string.carcosa_setting);
-        String forgottenOwnedString = getResources().getString(R.string.forgotten_setting);
-        String circleOwnedString = getResources().getString(R.string.circle_setting);
-        String dreamOwnedString = getResources().getString(R.string.dream_setting);
-        String normanOwnedString = getResources().getString(R.string.norman_withers);
-        String silasOwnedString = getResources().getString(R.string.silas_marsh);
-        SharedPreferences settings = getSharedPreferences(sharedPrefs, 0);
-        boolean dunwichOwned = settings.getBoolean(dunwichOwnedString, true);
-        boolean carcosaOwned = settings.getBoolean(carcosaOwnedString, true);
-        boolean forgottenOwned = settings.getBoolean(forgottenOwnedString, true);
-        boolean circleOwned = settings.getBoolean(circleOwnedString, true);
-        boolean dreamOwned = settings.getBoolean(dreamOwnedString, true);
-        boolean normanOwned = settings.getBoolean(normanOwnedString, false);
-        boolean silasOwned = settings.getBoolean(silasOwnedString, false);
-        if (!dunwichOwned) {
+        if (globalVariables.CurrentCampaign == 5 && globalVariables.CurrentScenario == 0){
+            coreCheckboxes.setVisibility(GONE);
+            nightButton.setVisibility(GONE);
             dunwichCheckboxes.setVisibility(GONE);
             dunwichButton.setVisibility(GONE);
-        }
-        if (!carcosaOwned) {
             carcosaCheckboxes.setVisibility(GONE);
             carcosaButton.setVisibility(GONE);
-        }
-        if (!forgottenOwned) {
             forgottenCheckboxes.setVisibility(GONE);
             forgottenButton.setVisibility(GONE);
-        }
-        if(!circleOwned) {
             circleCheckboxes.setVisibility(GONE);
             circleButton.setVisibility(GONE);
-        }
-        if(!dreamOwned) {
             dreamCheckboxes.setVisibility(GONE);
             dreamButton.setVisibility(GONE);
-        }
-        boolean promoCount = false;
-        if (!normanOwned) {
             normanCheckbox.setVisibility(GONE);
-            promoCount = true;
-        }
-        if (!silasOwned) {
             silasCheckbox.setVisibility(GONE);
-            promoCount = true;
-        }
-        if(promoCount){
             promo.setVisibility(GONE);
+            select.setVisibility(GONE);
+            current.setVisibility(GONE);
+        } else {
+            nightButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nightButton.setImageResource(R.drawable.notz_pressed);
+                    dunwichButton.setImageResource(R.drawable.dunwich);
+                    carcosaButton.setImageResource(R.drawable.carcosa);
+                    forgottenButton.setImageResource(R.drawable.forgotten);
+                    promo.setImageResource(R.drawable.investigator);
+                    coreCheckboxes.setVisibility(VISIBLE);
+                    dunwichCheckboxes.setVisibility(GONE);
+                    carcosaCheckboxes.setVisibility(GONE);
+                    forgottenCheckboxes.setVisibility(GONE);
+                    investigatorCheckboxes.setVisibility(GONE);
+                    circleButton.setImageResource(R.drawable.circle);
+                    circleCheckboxes.setVisibility(GONE);
+                    dreamButton.setImageResource(R.drawable.dream);
+                    dreamCheckboxes.setVisibility(GONE);
+                }
+            });
+            dunwichButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nightButton.setImageResource(R.drawable.notz);
+                    dunwichButton.setImageResource(R.drawable.dunwich_pressed);
+                    carcosaButton.setImageResource(R.drawable.carcosa);
+                    forgottenButton.setImageResource(R.drawable.forgotten);
+                    promo.setImageResource(R.drawable.investigator);
+                    coreCheckboxes.setVisibility(GONE);
+                    dunwichCheckboxes.setVisibility(VISIBLE);
+                    carcosaCheckboxes.setVisibility(GONE);
+                    forgottenCheckboxes.setVisibility(GONE);
+                    investigatorCheckboxes.setVisibility(GONE);
+                    circleButton.setImageResource(R.drawable.circle);
+                    circleCheckboxes.setVisibility(GONE);
+                    dreamButton.setImageResource(R.drawable.dream);
+                    dreamCheckboxes.setVisibility(GONE);
+                }
+            });
+            carcosaButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nightButton.setImageResource(R.drawable.notz);
+                    dunwichButton.setImageResource(R.drawable.dunwich);
+                    carcosaButton.setImageResource(R.drawable.carcosa_pressed);
+                    forgottenButton.setImageResource(R.drawable.forgotten);
+                    promo.setImageResource(R.drawable.investigator);
+                    coreCheckboxes.setVisibility(GONE);
+                    dunwichCheckboxes.setVisibility(GONE);
+                    carcosaCheckboxes.setVisibility(VISIBLE);
+                    forgottenCheckboxes.setVisibility(GONE);
+                    investigatorCheckboxes.setVisibility(GONE);
+                    circleButton.setImageResource(R.drawable.circle);
+                    circleCheckboxes.setVisibility(GONE);
+                    dreamButton.setImageResource(R.drawable.dream);
+                    dreamCheckboxes.setVisibility(GONE);
+                }
+            });
+            forgottenButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nightButton.setImageResource(R.drawable.notz);
+                    dunwichButton.setImageResource(R.drawable.dunwich);
+                    carcosaButton.setImageResource(R.drawable.carcosa);
+                    forgottenButton.setImageResource(R.drawable.forgotten_pressed);
+                    promo.setImageResource(R.drawable.investigator);
+                    coreCheckboxes.setVisibility(GONE);
+                    dunwichCheckboxes.setVisibility(GONE);
+                    carcosaCheckboxes.setVisibility(GONE);
+                    forgottenCheckboxes.setVisibility(VISIBLE);
+                    investigatorCheckboxes.setVisibility(GONE);
+                    circleButton.setImageResource(R.drawable.circle);
+                    circleCheckboxes.setVisibility(GONE);
+                    dreamButton.setImageResource(R.drawable.dream);
+                    dreamCheckboxes.setVisibility(GONE);
+                }
+            });
+            circleButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nightButton.setImageResource(R.drawable.notz);
+                    dunwichButton.setImageResource(R.drawable.dunwich);
+                    carcosaButton.setImageResource(R.drawable.carcosa);
+                    forgottenButton.setImageResource(R.drawable.forgotten);
+                    promo.setImageResource(R.drawable.investigator);
+                    coreCheckboxes.setVisibility(GONE);
+                    dunwichCheckboxes.setVisibility(GONE);
+                    carcosaCheckboxes.setVisibility(GONE);
+                    forgottenCheckboxes.setVisibility(GONE);
+                    investigatorCheckboxes.setVisibility(GONE);
+                    circleButton.setImageResource(R.drawable.circle_pressed);
+                    circleCheckboxes.setVisibility(VISIBLE);
+                    dreamButton.setImageResource(R.drawable.dream);
+                    dreamCheckboxes.setVisibility(GONE);
+                }
+            });
+            dreamButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nightButton.setImageResource(R.drawable.notz);
+                    dunwichButton.setImageResource(R.drawable.dunwich);
+                    carcosaButton.setImageResource(R.drawable.carcosa);
+                    forgottenButton.setImageResource(R.drawable.forgotten);
+                    promo.setImageResource(R.drawable.investigator);
+                    coreCheckboxes.setVisibility(GONE);
+                    dunwichCheckboxes.setVisibility(GONE);
+                    carcosaCheckboxes.setVisibility(GONE);
+                    forgottenCheckboxes.setVisibility(GONE);
+                    investigatorCheckboxes.setVisibility(GONE);
+                    circleButton.setImageResource(R.drawable.circle);
+                    circleCheckboxes.setVisibility(GONE);
+                    dreamButton.setImageResource(R.drawable.dream_pressed);
+                    dreamCheckboxes.setVisibility(VISIBLE);
+                }
+            });
+            promo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nightButton.setImageResource(R.drawable.notz);
+                    dunwichButton.setImageResource(R.drawable.dunwich);
+                    carcosaButton.setImageResource(R.drawable.carcosa);
+                    forgottenButton.setImageResource(R.drawable.forgotten);
+                    promo.setImageResource(R.drawable.investigator_pressed);
+                    coreCheckboxes.setVisibility(GONE);
+                    dunwichCheckboxes.setVisibility(GONE);
+                    carcosaCheckboxes.setVisibility(GONE);
+                    forgottenCheckboxes.setVisibility(GONE);
+                    investigatorCheckboxes.setVisibility(VISIBLE);
+                    circleButton.setImageResource(R.drawable.circle);
+                    circleCheckboxes.setVisibility(GONE);
+                    dreamButton.setImageResource(R.drawable.dream);
+                    dreamCheckboxes.setVisibility(GONE);
+                }
+            });
+
+            // Hide investigators if expansion isn't owned
+            String sharedPrefs = getResources().getString(R.string.shared_prefs);
+            String dunwichOwnedString = getResources().getString(R.string.dunwich_setting);
+            String carcosaOwnedString = getResources().getString(R.string.carcosa_setting);
+            String forgottenOwnedString = getResources().getString(R.string.forgotten_setting);
+            String circleOwnedString = getResources().getString(R.string.circle_setting);
+            String dreamOwnedString = getResources().getString(R.string.dream_setting);
+            String normanOwnedString = getResources().getString(R.string.norman_withers);
+            String silasOwnedString = getResources().getString(R.string.silas_marsh);
+            SharedPreferences settings = getSharedPreferences(sharedPrefs, 0);
+            boolean dunwichOwned = settings.getBoolean(dunwichOwnedString, true);
+            boolean carcosaOwned = settings.getBoolean(carcosaOwnedString, true);
+            boolean forgottenOwned = settings.getBoolean(forgottenOwnedString, true);
+            boolean circleOwned = settings.getBoolean(circleOwnedString, true);
+            boolean dreamOwned = settings.getBoolean(dreamOwnedString, true);
+            boolean normanOwned = settings.getBoolean(normanOwnedString, false);
+            boolean silasOwned = settings.getBoolean(silasOwnedString, false);
+            if (!dunwichOwned) {
+                dunwichCheckboxes.setVisibility(GONE);
+                dunwichButton.setVisibility(GONE);
+            }
+            if (!carcosaOwned) {
+                carcosaCheckboxes.setVisibility(GONE);
+                carcosaButton.setVisibility(GONE);
+            }
+            if (!forgottenOwned) {
+                forgottenCheckboxes.setVisibility(GONE);
+                forgottenButton.setVisibility(GONE);
+            }
+            if (!circleOwned) {
+                circleCheckboxes.setVisibility(GONE);
+                circleButton.setVisibility(GONE);
+            }
+            if (!dreamOwned) {
+                dreamCheckboxes.setVisibility(GONE);
+                dreamButton.setVisibility(GONE);
+            }
+            boolean promoCount = false;
+            if (!normanOwned) {
+                normanCheckbox.setVisibility(GONE);
+                promoCount = true;
+            }
+            if (!silasOwned) {
+                silasCheckbox.setVisibility(GONE);
+                promoCount = true;
+            }
+            if (promoCount) {
+                promo.setVisibility(GONE);
+            }
         }
         // Set fonts and listeners to all checkboxes
         for (int i = 0; i < coreCheckboxes.getChildCount(); i++) {
@@ -402,12 +422,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         continueButton.setTypeface(teutonic);
         if (globalVariables.CurrentCampaign == 4) {
             continueButton.setText(R.string.choose_supplies);
+        } else if (globalVariables.CurrentCampaign == 5 && globalVariables.CurrentScenario == 0){
+            continueButton.setText(R.string.circle_prologue);
         }
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // If no investigators are selected displays a toast
-                if (globalVariables.InvestigatorNames.size() == 0) {
+                if (globalVariables.InvestigatorNames.size() == 0 && !(globalVariables.CurrentCampaign == 5 || globalVariables.CurrentScenario == 0)) {
                     Toast toast = Toast.makeText(getBaseContext(), R.string.must_investigator, Toast
                             .LENGTH_SHORT);
                     toast.show();
@@ -1277,7 +1299,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
             confirm.setTypeface(arnoprobold);
 
             // Change confirm text if on Forgotten Age
-            if(globalVariables.CurrentCampaign == 4){
+            if(globalVariables.CurrentCampaign == 4 || globalVariables.CurrentCampaign == 5){
                 confirm.setText(R.string.continue_question);
             }
 
@@ -1423,7 +1445,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                             // Set current scenario to first scenario
                             if (globalVariables.CurrentCampaign == 2) {
                                 globalVariables.CurrentScenario = globalVariables.FirstScenario;
-                            } else if (globalVariables.CurrentCampaign == 3 && lola) {
+                            } else if (globalVariables.CurrentCampaign == 3 && lola || globalVariables.CurrentCampaign == 5) {
                                 globalVariables.CurrentScenario = 0;
                             } else {
                                 globalVariables.CurrentScenario = 1;

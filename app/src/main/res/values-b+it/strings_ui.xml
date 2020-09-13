@@ -14,6 +14,9 @@
     <string name="campaign_completed">Campagna Completata</string>
     <string name="delete_campaign">Cancella Campagna</string>
     <string name="confirm_delete_campaign">Sei sicuro di voler cancellare questa campagna?</string>
+    <string name="corrupt_campaign">Corrupt Campaign</string>
+    <string name="confirm_corrupt_campaign">This campaign has become corrupted due to a bug. Please create a new
+        campaign.\n\nAre you sure you want to continue?</string>
 
 
     <string name="scenario_setup">Preparazione dello Scenario</string>
@@ -59,10 +62,12 @@
     <string name="decklist_url">Link al mazzo</string>
     <string name="start_campaign">Inizia Campagna</string>
     <string name="confirm_start_campaign">Salvare e iniziare la campagna?</string>
+    <string name="continue_question">Continue?</string>
     <string name="confirm_changes">Conferma i cambiamenti</string>
     <string name="okay">OK</string>
     <string name="cancel">Annulla</string>
     <string name="nothing">Nulla da mostrare.</string>
+    <string name="notes">Notes</string>
 
     <string name="campaign_finished">Campagna terminata</string>
     <string name="finish_campaign">Termina la Campagna</string>
@@ -74,6 +79,11 @@
     <string name="strange_solution">Hai identificato la soluzione.\n\n</string>
     <string name="archaic_glyphs_dialog">Hai tradotto i glifi</string>
     <string name="archaic_glyphs">Hai tradotto i glifi.\n\n</string>
+    <string name="charons_obol">Charon\'s Obol</string>
+    <string name="charons_obol_in_play">Charon\'s Obol in play</string>
+    <string name="ancient_stone_dialog">You have identified the stone</string>
+    <string name="ancient_stone">You have identified the stone. (</string>
+    <string name="test_difficulty">Skill test difficulty:</string>
 
     <string name="default_chaos_bag">Base</string>
     <string name="chaos_bag_name">Nome del Sacchetto (obbligatorio)</string>
@@ -138,6 +148,8 @@
     <string name="expert">Esperto</string>
     <string name="scenario_card">Carta Scenario</string>
     <string name="current_setup">Impostazioni attuali</string>
+    <string name="seal">Seal</string>
+    <string name="seal_tokens">Seal tokens</string>
     <string name="draw_token">Pesca segnalino</string>
     <string name="add_token">Aggiungi</string>
     <string name="skull">Teschio</string>
@@ -217,17 +229,24 @@
     <string name="preston_fairmont">Preston Fairmont</string>
     <string name="diana_stanley">Diana Stanley</string>
     <string name="rita_young">Rita Young</string>
+    <string name="gavriella_mizrah">Gavriella Mizrah</string>
+    <string name="jerome_davids">Jerome Davids</string>
+    <string name="penny_white">Penny White</string>
+    <string name="valentino_rivas">Valentino Rivas</string>
     <string name="tommy_muldoon">Tommy Muldoon</string>
     <string name="mandy_thompson">Mandy Thompson</string>
     <string name="tony_morgan">Tony Morgan</string>
     <string name="luke_robinson">Luke Robinson</string>
     <string name="patrice_hathaway">Patrice Hathaway</string>
 
+
     <string name="cover_up">Insabbiamento non risolto in gioco</string>
     <string name="hospital_debts">Debiti Ospedalieri non risolta in gioco</string>
     <string name="smite_the_wicked">Punire i Perversi non risolta in gioco</string>
     <string name="searching_for_izzie">Alla Ricerca di Izzie non risolta in gioco</string>
     <string name="angered_spirits">Spiriti Infuriati non risolta in gioco</string>
+    <string name="unsolved_case">Unsolved Case in play</string>
+    <string name="lodge_debts">Lodge "Debts" in hand</string>
     <string name="voice_of_the_messenger">Voce del Messaggero risolta</string>
     <string name="voice_of_the_messenger_heading">Voce del Messaggero</string>
     <string name="voice_of_the_messenger_text">Traumi sofferti a causa di Voce del Messaggero:</string>

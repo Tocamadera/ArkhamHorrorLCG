@@ -69,6 +69,9 @@ public class ChaosBagSetupActivity extends AppCompatActivity {
             case 4:
                 title.setText(R.string.forgotten_campaign);
                 break;
+            case 5:
+                title.setText(R.string.circle_campaign);
+                break;
         }
         TextView chaosBag = findViewById(R.id.chaos_bag);
         chaosBag.setTypeface(teutonic);
@@ -183,6 +186,7 @@ public class ChaosBagSetupActivity extends AppCompatActivity {
     }
 
     // Difficulties
+    //{no idea, +1, 0, -1, -2, -3, -4, -5, -6, -7, -8, skull, cultist, tablet, elder thing, auto-fail, elder sign}
     private int[] basebag() {
         int[] bag = new int[17];
         switch (globalVariables.CurrentCampaign) {
@@ -250,6 +254,22 @@ public class ChaosBagSetupActivity extends AppCompatActivity {
                         break;
                     case 3:
                         bag = new int[]{0, 0, 1, 1, 2, 2, 2, 0, 1, 0, 1, 2, 0, 0, 1, 1, 1};
+                        break;
+                }
+                break;
+            case 5:
+                switch (globalVariables.CurrentDifficulty){
+                    case 0:
+                        bag = new int[]{0, 2, 3, 2, 1, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1};
+                        break;
+                    case 1:
+                        bag = new int[]{0, 1, 2, 2, 2, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1};
+                        break;
+                    case 2:
+                        bag = new int[]{0, 0, 2, 2, 2, 1, 1, 1, 0, 0, 0, 2, 0, 0, 0, 1, 1};
+                        break;
+                    case 3:
+                        bag = new int[]{0, 0, 1, 2, 2, 1, 1, 0, 1, 0, 1, 2, 0, 0, 0, 1, 1};
                         break;
                 }
                 break;

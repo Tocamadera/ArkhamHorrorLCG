@@ -102,11 +102,11 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/dream"/>
 
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/innsmouth"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/innsmouth"/>
+                        android:src="@drawable/innsmouth"/>-->
 
                     <ImageView
                         android:id="@+id/investigator"

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="circle_campaign">El Círculo Roto</string>
+    <string name="circle_prologue">Prólogo</string>
+    <string name="introduction">Introducción</string>
+    <string name="circle_scenario_zero">Prólogo (escenario 0) Desaparición en la finca del Crepúsculo</string>
+    <string name="circle_scenario_one">Escenario 1: La hora bruja</string>
+    <string name="circle_scenario_two">Escenario 2: A las puertas de la muerte</string>
+    <string name="circle_interlude_one">Interludio 1: Rastro de los perdidos</string>
+    <string name="circle_interlude_two">Interludio 2: El precio del progreso</string>
+    <string name="circle_scenario_two_epilogue">You are Being Hunted</string>
+    <string name="circle_epilogue">Epílogo</string>
+    <!--Miscellaneous-->
+    <!--Campaign Log-->
+    <!--Edit log-->
+    <!--Chaos bag-->
+    <!--Campaign introduction-->
+    <string name="circle_prologue_intro_one">
+        \nDomingo, 22 de noviembre de 1925. Arkham, Massachusetts.\n
+        \nAunque ya ha pasado casi un mes de la Noche de Víspera de Difuntos, una
+        sombría melancolía sigue impregnando toda la ciudad. Cada mañana, una
+        densa niebla llena las calles. Las noches comienzan a hacerse más largas, y
+        si preguntas por la ciudad, oirás a la gente jurar que también se vuelven más
+        oscuras. Pero pese al plomizo ambiente, el progreso continúa en la aletargada
+        ciudad de Arkham. La elección de Nathaniel Rhodes para el Senado de
+        los Estados Unidos hace que los miembros más respetables de la comunidad
+        se sientan optimistas sobre el futuro de la ciudad. Y esta noche, un hombre
+        llamado Josef Meiger acoge la gala benéfica de la Logia del Crepúsculo de
+        Plata en su bien equipada finca situada en French Hill; se trata de un acontecimiento
+        anual sólo para miembros que resultará mortal para varios de
+        los asistentes...</string>
+    <string name="circle_prologue_investigators">Each player must choose one of the following neutral investigators to control for the duration of this prologue:</string>
+    <!--Scenario introductions-->
+    <!--Scenario set-up instructions-->
+    <!--Scenario resolutions-->
+</resources>

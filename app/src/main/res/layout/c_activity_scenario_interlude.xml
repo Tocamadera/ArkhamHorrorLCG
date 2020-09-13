@@ -87,7 +87,6 @@
                     android:paddingBottom="@dimen/checkbox_padding"
                     android:paddingTop="@dimen/checkbox_padding"
                     android:visibility="gone"/>
-
             </RadioGroup>
 
             <LinearLayout
@@ -108,6 +107,56 @@
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/arnopro_textsize"
                 android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/circle_epilogue_investigators"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <CheckBox
+                    android:id="@+id/gavriella_mizrah"
+                    android:layout_width="wrap_content"
+                    android:text="@string/gavriella_mizrah"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/arnopro_textsize"
+                    android:button="@drawable/checkbox_style"
+                    android:paddingBottom="@dimen/checkbox_padding"
+                    android:paddingTop="@dimen/checkbox_padding"/>
+                <CheckBox
+                    android:id="@+id/jerome_davids"
+                    android:layout_width="wrap_content"
+                    android:text="@string/jerome_davids"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/arnopro_textsize"
+                    android:button="@drawable/checkbox_style"
+                    android:paddingBottom="@dimen/checkbox_padding"
+                    android:paddingTop="@dimen/checkbox_padding"/>
+                <CheckBox
+                    android:id="@+id/penny_white"
+                    android:layout_width="wrap_content"
+                    android:text="@string/penny_white"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/arnopro_textsize"
+                    android:button="@drawable/checkbox_style"
+                    android:paddingBottom="@dimen/checkbox_padding"
+                    android:paddingTop="@dimen/checkbox_padding"/>
+                <CheckBox
+                    android:id="@+id/valentino_rivas"
+                    android:layout_width="wrap_content"
+                    android:text="@string/valentino_rivas"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/arnopro_textsize"
+                    android:button="@drawable/checkbox_style"
+                    android:paddingBottom="@dimen/checkbox_padding"
+                    android:paddingTop="@dimen/checkbox_padding"/>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/introduction_text_additional_two"

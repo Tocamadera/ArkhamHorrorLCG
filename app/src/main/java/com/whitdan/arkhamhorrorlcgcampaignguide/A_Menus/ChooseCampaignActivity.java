@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.CampaignIntroductionActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.CampaignInvestigatorsActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 
@@ -32,6 +33,7 @@ public class ChooseCampaignActivity extends AppCompatActivity {
         Button DunwichButton = findViewById(R.id.dunwich_button);
         Button CarcosaButton = findViewById(R.id.carcosa_button);
         Button ForgottenButton = findViewById(R.id.forgotten_button);
+        Button CircleButton = findViewById(R.id.circle_button);
 
         // Set correct font to all of the buttons
         Typeface teutonic = Typeface.createFromAsset(getAssets(), "fonts/teutonic.ttf");
@@ -39,12 +41,14 @@ public class ChooseCampaignActivity extends AppCompatActivity {
         DunwichButton.setTypeface(teutonic);
         CarcosaButton.setTypeface(teutonic);
         ForgottenButton.setTypeface(teutonic);
+        CircleButton.setTypeface(teutonic);
 
         // Attach click listener to each button
         NightButton.setOnClickListener(new NewCampaignClickListener());
         DunwichButton.setOnClickListener(new NewCampaignClickListener());
         CarcosaButton.setOnClickListener(new NewCampaignClickListener());
         ForgottenButton.setOnClickListener(new NewCampaignClickListener());
+        CircleButton.setOnClickListener(new NewCampaignClickListener());
 
         // Back button
         Button backButton = findViewById(R.id.back_button);
@@ -78,11 +82,19 @@ public class ChooseCampaignActivity extends AppCompatActivity {
                 case R.id.forgotten_button:
                     globalVariables.CurrentCampaign = 4;
                     break;
+                case R.id.circle_button:
+                    globalVariables.CurrentCampaign = 5;
+                    break;
             }
 
             // Set the scenario number to 0 to indicate campaign setup
             globalVariables.CurrentScenario = 0;
-            Intent intent = new Intent(ChooseCampaignActivity.this, CampaignIntroductionActivity.class);
+            Intent intent;
+            if (globalVariables.CurrentCampaign == 5){
+                intent = new Intent(ChooseCampaignActivity.this, CampaignInvestigatorsActivity.class);
+            } else {
+                intent = new Intent(ChooseCampaignActivity.this, CampaignIntroductionActivity.class);
+            }
             startActivity(intent);
         }
     }

@@ -18,9 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.CampaignInvestigatorsActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.CampaignFinishedActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.Investigator;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -74,6 +76,11 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
         final RadioButton introductionOptionTwo = findViewById(R.id.introduction_option_two);
         final RadioButton introductionOptionThree = findViewById(R.id.introduction_option_three);
         final RadioButton introductionOptionFour = findViewById(R.id.introduction_option_four);
+        LinearLayout circle_epilogue_investigators = findViewById(R.id.circle_epilogue_investigators);
+        final CheckBox circleEpilogueOptionOne = findViewById(R.id.gavriella_mizrah);
+        final CheckBox circleEpilogueOptionTwo = findViewById(R.id.jerome_davids);
+        final CheckBox circleEpilogueOptionTree = findViewById(R.id.penny_white);
+        final CheckBox circleEpilogueOptionFour = findViewById(R.id.valentino_rivas);
         Typeface arnopro = Typeface.createFromAsset(getAssets(), "fonts/arnopro.otf");
         final Typeface arnoprobold = Typeface.createFromAsset(getAssets(), "fonts/arnoprobold.otf");
         introductionOptionOne.setTypeface(arnopro);
@@ -923,6 +930,24 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         break;
                 }
                 break;
+            case 5:
+                switch (globalVariables.CurrentScenario){
+                    case 0:
+                        introduction.setText(R.string.circle_prologue_intro_one);
+                        introductionOne.setTypeface(arnoprobold);
+                        introductionOne.setText(R.string.circle_prologue_investigators);
+                        for (int i = 0; i < circle_epilogue_investigators.getChildCount(); i++) {
+                            View view = circle_epilogue_investigators.getChildAt(i);
+                            if (view instanceof CheckBox) {
+                                ((CheckBox) view).setTypeface(arnopro);
+                                ((CheckBox) view).setOnCheckedChangeListener(new InvestigatorCheckboxListener());
+                            }
+                        }
+                        introductionOne.setVisibility(VISIBLE);
+                        circle_epilogue_investigators.setVisibility(VISIBLE);
+                        break;
+                }
+
         }
 
         if (globalVariables.CurrentScenario > 100) {
@@ -1046,6 +1071,60 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private class InvestigatorCheckboxListener implements CompoundButton.OnCheckedChangeListener {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if (buttonView.isPressed()) {
+                switch (buttonView.getId()) {
+                    case R.id.gavriella_mizrah:
+                        if (isChecked) {
+                            globalVariables.InvestigatorNames.add(Investigator.GAVRIELLA_MIZRAH);
+                        } else {
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.GAVRIELLA_MIZRAH) {
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                    case R.id.jerome_davids:
+                        if (isChecked) {
+                            globalVariables.InvestigatorNames.add(Investigator.JEROME_DAVIDS);
+                        } else {
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.JEROME_DAVIDS) {
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                    case R.id.penny_white:
+                        if (isChecked) {
+                            globalVariables.InvestigatorNames.add(Investigator.PENNY_WHITE);
+                        } else {
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.PENNY_WHITE) {
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                    case R.id.valentino_rivas:
+                        if (isChecked) {
+                            globalVariables.InvestigatorNames.add(Investigator.VALENTINO_RIVAS);
+                        } else {
+                            for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.VALENTINO_RIVAS) {
+                                    globalVariables.InvestigatorNames.remove(i);
+                                }
+                            }
+                        }
+                        break;
+                }
+            }
+        }
     }
 
     // Any resolutions which require implementing

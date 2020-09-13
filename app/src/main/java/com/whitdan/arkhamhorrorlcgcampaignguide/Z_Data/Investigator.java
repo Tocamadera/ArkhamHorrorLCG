@@ -31,17 +31,21 @@ public class Investigator {
     public static final int PRESTON_FAIRMONT = 27;
     public static final int DIANA_STANLEY = 28;
     public static final int RITA_YOUNG = 29;
-    public static final int TOMMY_MULDOON = 30;
-    public static final int MANDY_THOMPSON = 31;
-    public static final int TONY_MORGAN = 32;
-    public static final int LUKE_ROBINSON = 33;
-    public static final int PATRICE_HATHAWAY = 34;
+    public static final int GAVRIELLA_MIZRAH = 30;
+    public static final int JEROME_DAVIDS = 31;
+    public static final int PENNY_WHITE = 32;
+    public static final int VALENTINO_RIVAS = 33;
+    public static final int TOMMY_MULDOON = 34;
+    public static final int MANDY_THOMPSON = 35;
+    public static final int TONY_MORGAN = 36;
+    public static final int LUKE_ROBINSON = 37;
+    public static final int PATRICE_HATHAWAY = 38;
 
     // Sets maximum health and sanity values for the various investigators (correspond to the names in the string array)
     // StartingXP sets the bonus XP available at start for an investigator (for applicable investigators)
-    private int[] health        = {0,9,5,8,6,7,9,6,8,7,6,9,7,5,6,8,6,6,6,6,9,8,7,7,6,6,8,7,7,9,8,6,9,5,7};
-    private int[] sanity        = {0,5,9,6,8,7,6,9,7,8,5,5,7,9,8,6,6,8,8,9,5,6,7,7,8,6,6,7,7,5,6,8,5,9,7};
-    private int[] startingXP    = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0};
+    private int[] health        = {0,9,5,8,6,7,9,6,8,7,6,9,7,5,6,8,6,6,6,6,9,8,7,7,6,6,8,7,7,9,8,4,7,5,8,6,9,5,7};
+    private int[] sanity        = {0,5,9,6,8,7,6,9,7,8,5,5,7,9,8,6,6,8,8,9,5,6,7,7,8,6,6,7,7,5,4,8,5,7,6,8,5,9,7};
+    private int[] startingXP    = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
     public Investigator(int investigator, String name, String deckName, String deck){
         setupInvestigator(investigator);

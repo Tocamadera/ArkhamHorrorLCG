@@ -70,6 +70,7 @@
     <string name="decklist_url">Link zur Deckliste</string>
     <string name="start_campaign">Kampagne beginnen</string>
     <string name="confirm_start_campaign">Speichern und Kampagne beginnen?</string>
+    <string name="continue_question">Continue?</string>
     <string name="confirm_changes">Änderungen speichern</string>
     <string name="okay">OK</string>
     <string name="cancel">Abbrechen</string>
@@ -250,12 +251,23 @@
     <string name="preston_fairmont">Preston Fairmont</string>
     <string name="diana_stanley">Diana Stanley</string>
     <string name="rita_young">Rita Young</string>
+    <string name="gavriella_mizrah">Gavriella Mizrah</string>
+    <string name="jerome_davids">Jerome Davids</string>
+    <string name="penny_white">Penny White</string>
+    <string name="valentino_rivas">Valentino Rivas</string>
+    <string name="tommy_muldoon">Tommy Muldoon</string>
+    <string name="mandy_thompson">Mandy Thompson</string>
+    <string name="tony_morgan">Tony Morgan</string>
+    <string name="luke_robinson">Luke Robinson</string>
+    <string name="patrice_hathaway">Patrice Hathaway</string>
 
     <string name="cover_up">Nicht abgeschlossenes <i>Vertuschen</i> im Spiel</string>
     <string name="hospital_debts">Nicht bezahlte <i>Krankenhausrechnungen</i> im Spiel</string>
     <string name="smite_the_wicked">Nicht abgeschlossenes <i>Zerschmettere die Gottlosen</i> im Spiel</string>
     <string name="searching_for_izzie">Nicht abgeschlossene <i>Suche nach Izzie</i> im Spiel</string>
     <string name="angered_spirits">Nicht besänftigte <i>Wütende Geister</i> im Spiel</string>
+    <string name="unsolved_case">Unsolved Case in play</string>
+    <string name="lodge_debts">Lodge "Debts" in hand</string>
     <string name="voice_of_the_messenger"><i>Stimme des Boten</i> wurde abgehandelt</string>
     <string name="voice_of_the_messenger_heading">Stimme des Boten</string>
     <string name="voice_of_the_messenger_text">Durch die Stimme des Boten erlittene Traumata:</string>

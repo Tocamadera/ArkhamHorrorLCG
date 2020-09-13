@@ -137,7 +137,7 @@
     <string name="r_two">R2</string>
     <string name="r_three">R3</string>
     <string name="r_four">R4</string>
-    <string name="r_five">R5</string>
+    <string name="r_five" translatable="false">R5</string>
     <string name="no_resolution">No Resolution</string>
     <string name="resolution_one">Resolution One</string>
     <string name="resolution_two">Resolution Two</string>
@@ -252,6 +252,10 @@
     <string name="preston_fairmont">Preston Fairmont</string>
     <string name="diana_stanley">Diana Stanley</string>
     <string name="rita_young">Rita Young</string>
+    <string name="gavriella_mizrah">Gavriella Mizrah</string>
+    <string name="jerome_davids">Jerome Davids</string>
+    <string name="penny_white">Penny White</string>
+    <string name="valentino_rivas">Valentino Rivas</string>
     <string name="tommy_muldoon">Tommy Muldoon</string>
     <string name="mandy_thompson">Mandy Thompson</string>
     <string name="tony_morgan">Tony Morgan</string>

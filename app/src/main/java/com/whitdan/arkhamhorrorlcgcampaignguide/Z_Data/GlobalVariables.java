@@ -29,6 +29,7 @@ public class GlobalVariables extends Application {
     public int DunwichCompleted;
     public int CarcosaCompleted;
     public int ForgottenCompleted;
+    public int CircleCompleted;
     public ArrayList<Integer> seal;
 
     /*
@@ -46,7 +47,7 @@ public class GlobalVariables extends Application {
     public String[] PlayerNames = new String[4];
     public String[] DeckNames = new String[4];
     public String[] DeckLists = new String[4];
-    public int[] InvestigatorsInUse = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    public int[] InvestigatorsInUse = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
                                                                         // Matches up to the names in the string array
 
     /*
@@ -337,6 +338,28 @@ public class GlobalVariables extends Application {
                         break;
                     case 35:
                         title.setText(R.string.forgotten_secret_scenario);
+                        break;
+                }
+                break;
+            case 5:
+                switch (CurrentScenario){
+                    case 0:
+                        title.setText(R.string.circle_scenario_zero);
+                        break;
+                    case 1:
+                        title.setText(R.string.circle_scenario_one);
+                        break;
+                    case 2:
+                        title.setText(R.string.circle_scenario_two);
+                        break;
+                    case 3:
+                        title.setText(R.string.circle_interlude_one);
+                        break;
+                    case 4:
+                        title.setText(R.string.circle_interlude_two);
+                        break;
+                    case 5:
+                        title.setText(R.string.circle_scenario_two_epilogue);
                         break;
                 }
         }

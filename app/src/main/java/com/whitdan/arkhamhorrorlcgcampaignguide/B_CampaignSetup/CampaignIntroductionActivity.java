@@ -79,6 +79,7 @@ public class CampaignIntroductionActivity extends AppCompatActivity {
             case 4:
                 title.setText(R.string.forgotten_campaign);
                 introduction.setText(R.string.forgotten_introduction);
+                break;
         }
 
         // Back button

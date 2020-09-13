@@ -223,12 +223,27 @@
     <string name="finn_edwards">Finn Edwards</string>
     <string name="father_mateo">Padre Mateo</string>
     <string name="calvin_wright">Calvin Wright</string>
+    <string name="joe_diamond">Joe Diamond</string>
+    <string name="preston_fairmont">Preston Fairmont</string>
+    <string name="diana_stanley">Diana Stanley</string>
+    <string name="rita_young">Rita Young</string>
+    <string name="gavriella_mizrah">Gavriella Mizrah</string>
+    <string name="jerome_davids">Jerome Davids</string>
+    <string name="penny_white">Penny White</string>
+    <string name="valentino_rivas">Valentino Rivas</string>
+    <string name="tommy_muldoon">Tommy Muldoon</string>
+    <string name="mandy_thompson">Mandy Thompson</string>
+    <string name="tony_morgan">Tony Morgan</string>
+    <string name="luke_robinson">Luke Robinson</string>
+    <string name="patrice_hathaway">Patrice Hathaway</string>
 
     <string name="cover_up">Encubrimiento en juego sin resolver</string>
     <string name="hospital_debts">Deudas en juego sin resolver</string>
     <string name="smite_the_wicked">Destruir a los malvados en juego sin resolver</string>
     <string name="searching_for_izzie">Buscando a Izzie en juego sin resolver</string>
     <string name="angered_spirits">Espíritus airados en juego sin resolver</string>
+    <string name="unsolved_case">Unsolved Case in play</string>
+    <string name="lodge_debts">Lodge "Debts" in hand</string>
     <string name="voice_of_the_messenger">Voz del mensajero resuelto</string>
     <string name="voice_of_the_messenger_heading">Voz del mensajero</string>
     <string name="voice_of_the_messenger_text">Trauma sufrido por la Voz del mensajero:</string>
