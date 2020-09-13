@@ -96,6 +96,7 @@ public class Investigator {
     public int SupplyPoints;
     public int Provisions;
     public int Medicine;
+    public int Gasoline;
     public int Supplies;
     public int ResuppliesOne;
 }

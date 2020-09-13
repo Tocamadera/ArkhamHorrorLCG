@@ -27,7 +27,7 @@ import static com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract.Inv
 public class ArkhamDbHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "campaigns.db";
-    private static final int DATABASE_VERSION = 33;
+    private static final int DATABASE_VERSION = 34;
 
     public ArkhamDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -116,6 +116,7 @@ public class ArkhamDbHelper extends SQLiteOpenHelper {
                 + InvestigatorEntry.COLUMN_INVESTIGATOR_DECKLIST + " STRING, "
                 + InvestigatorEntry.COLUMN_INVESTIGATOR_PROVISIONS + " INTEGER, "
                 + InvestigatorEntry.COLUMN_INVESTIGATOR_MEDICINE + " INTEGER, "
+                + InvestigatorEntry.COLUMN_INVESTIGATOR_GASOLINE + " INTEGER, "
                 + InvestigatorEntry.COLUMN_INVESTIGATOR_SUPPLIES + " INTEGER, "
                 + InvestigatorEntry.COLUMN_INVESTIGATOR_RESUPPLIES_ONE + " INTEGER);";
 
@@ -649,10 +650,27 @@ public class ArkhamDbHelper extends SQLiteOpenHelper {
                         CampaignEntry.COLUMN_DIANA_INUSE + " INTEGER";
                 String SQL_UPGRADE_TWENTYNINE_FOUR = "ALTER TABLE " + CampaignEntry.TABLE_NAME + " ADD COLUMN " +
                         CampaignEntry.COLUMN_RITA_INUSE + " INTEGER";
+
                 db.execSQL(SQL_UPGRADE_TWENTYNINE_ONE);
                 db.execSQL(SQL_UPGRADE_TWENTYNINE_TWO);
                 db.execSQL(SQL_UPGRADE_TWENTYNINE_THREE);
                 db.execSQL(SQL_UPGRADE_TWENTYNINE_FOUR);
+            case 34:
+                String SQL_UPGRADE_THIRTYFOUR_ONE = "ALTER TABLE " + CampaignEntry.TABLE_NAME + " ADD COLUMN " +
+                        CampaignEntry.COLUMN_GAVRIELLA_INUSE + " INTEGER";
+                String SQL_UPGRADE_THIRTYFOUR_TWO = "ALTER TABLE " + CampaignEntry.TABLE_NAME + " ADD COLUMN " +
+                        CampaignEntry.COLUMN_JEROME_INUSE + " INTEGER";
+                String SQL_UPGRADE_THIRTYFOUR_THREE = "ALTER TABLE " + CampaignEntry.TABLE_NAME + " ADD COLUMN " +
+                        CampaignEntry.COLUMN_PENNY_INUSE + " INTEGER";
+                String SQL_UPGRADE_THIRTYFOUR_FOUR = "ALTER TABLE " + CampaignEntry.TABLE_NAME + " ADD COLUMN " +
+                        CampaignEntry.COLUMN_VALENTINO_INUSE + " INTEGER";
+                String SQL_UPGRADE_THIRTYFOUR_FIVE = "ALTER TABLE " + InvestigatorEntry.TABLE_NAME + " ADD COLUMN " +
+                        InvestigatorEntry.COLUMN_INVESTIGATOR_GASOLINE + " INTEGER";
+                db.execSQL(SQL_UPGRADE_THIRTYFOUR_ONE);
+                db.execSQL(SQL_UPGRADE_THIRTYFOUR_TWO);
+                db.execSQL(SQL_UPGRADE_THIRTYFOUR_THREE);
+                db.execSQL(SQL_UPGRADE_THIRTYFOUR_FOUR);
+                db.execSQL(SQL_UPGRADE_THIRTYFOUR_FIVE);
         }
     }
 }

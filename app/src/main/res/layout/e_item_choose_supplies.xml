@@ -147,6 +147,49 @@
                 android:src="@drawable/button_increment"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/gasoline_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/checkbox_padding"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/gasoline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/gasoline_choose"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/arnopro_textsize"/>
+
+            <ImageView
+                android:id="@+id/gasoline_decrement"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/button_decrement"/>
+
+            <TextView
+                android:id="@+id/gasoline_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/arnopro_textsize"/>
+
+            <ImageView
+                android:id="@+id/gasoline_increment"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/button_increment"/>
+        </LinearLayout>
+
         <CheckBox
             android:id="@+id/physical_trauma"
             android:layout_width="match_parent"

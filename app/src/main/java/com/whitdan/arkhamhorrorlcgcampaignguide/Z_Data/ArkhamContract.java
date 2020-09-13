@@ -94,6 +94,7 @@ public class ArkhamContract {
         public static final String COLUMN_INVESTIGATOR_DECKLIST = "decklist";
         public static final String COLUMN_INVESTIGATOR_PROVISIONS = "provisions";
         public static final String COLUMN_INVESTIGATOR_MEDICINE = "medicine";
+        public static final String COLUMN_INVESTIGATOR_GASOLINE = "gasoline";
         public static final String COLUMN_INVESTIGATOR_SUPPLIES = "supplies";
         public static final String COLUMN_INVESTIGATOR_RESUPPLIES_ONE = "resupplies_one";
     }

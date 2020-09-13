@@ -31,6 +31,7 @@ public class ChooseSuppliesActivity extends AppCompatActivity {
     int[] availableSupplies;
     int[] provisions;
     int[] medicine;
+    int[] gasoline;
     int[] suppliesChosen;
 
     @Override
@@ -49,6 +50,7 @@ public class ChooseSuppliesActivity extends AppCompatActivity {
         globalVariables = (GlobalVariables) this.getApplication();
         provisions = new int[]{0, 0, 0, 0};
         medicine = new int[]{0, 0, 0, 0};
+        gasoline = new int[]{0, 0, 0, 0};
         suppliesChosen = new int[]{1, 1, 1, 1};
         availableSupplies = new int[]{0, 0, 0, 0};
 
@@ -231,6 +233,52 @@ public class ChooseSuppliesActivity extends AppCompatActivity {
                 }
             });
 
+            // Gasoline
+            TextView gasoline = selectSupplies.findViewById(R.id.gasoline);
+            gasoline.setTypeface(arnopro);
+            final TextView gasolineAmount = selectSupplies.findViewById(R.id.gasoline_amount);
+            gasolineAmount.setTypeface(wolgastbold);
+            if (globalVariables.Investigators.get(currentInvestigator).Gasoline > 0) {
+                gasolineAmount.setText(Integer.toString(globalVariables.Investigators.get(currentInvestigator)
+                        .Gasoline));
+            } else {
+                gasolineAmount.setText("0");
+            }
+            ImageView gasolineDecrement = selectSupplies.findViewById(R.id.gasoline_decrement);
+            ImageView gasolineIncrement = selectSupplies.findViewById(R.id.gasoline_increment);
+            gasolineDecrement.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int amount = Integer.valueOf(gasolineAmount.getText().toString());
+                    if (amount > 0) {
+                        amount--;
+                        globalVariables.Investigators.get(currentInvestigator).Gasoline = amount;
+                        globalVariables.Investigators.get(currentInvestigator).SupplyPoints += 1;
+                        gasolineAmount.setText(Integer.toString(amount));
+                        int currentPoints = globalVariables.Investigators.get(currentInvestigator).SupplyPoints;
+                        String ptsAvailable = Integer.toString(currentPoints) + " " + getResources().getString(R.string
+                                .points_available);
+                        supplyPoints.setText(ptsAvailable);
+                    }
+                }
+            });
+            gasolineIncrement.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int amount = Integer.valueOf(gasolineAmount.getText().toString());
+                    if (globalVariables.Investigators.get(currentInvestigator).SupplyPoints >= 2) {
+                        amount++;
+                        globalVariables.Investigators.get(currentInvestigator).Gasoline = amount;
+                        globalVariables.Investigators.get(currentInvestigator).SupplyPoints += -1;
+                        gasolineAmount.setText(Integer.toString(amount));
+                        int currentPoints = globalVariables.Investigators.get(currentInvestigator).SupplyPoints;
+                        String ptsAvailable = Integer.toString(currentPoints) + " " + getResources().getString(R.string
+                                .points_available);
+                        supplyPoints.setText(ptsAvailable);
+                    }
+                }
+            });
+
             // Checkboxes
             CheckBox poisoned = selectSupplies.findViewById(R.id.poisoned);
             CheckBox physical = selectSupplies.findViewById(R.id.physical_trauma);
@@ -244,6 +292,7 @@ public class ChooseSuppliesActivity extends AppCompatActivity {
             CheckBox binoculars = selectSupplies.findViewById(R.id.binoculars);
             CheckBox chalk = selectSupplies.findViewById(R.id.chalk);
             CheckBox pendant = selectSupplies.findViewById(R.id.pendant);
+            LinearLayout gasolineLayout = selectSupplies.findViewById(R.id.gasoline_layout);
             poisoned.setTypeface(arnopro);
             physical.setTypeface(arnopro);
             mental.setTypeface(arnopro);
@@ -272,10 +321,11 @@ public class ChooseSuppliesActivity extends AppCompatActivity {
 
             // Setup views for resupply point
             if (globalVariables.CurrentScenario == 9) {
-                rope.setText(R.string.gasoline_choose);
-                torches.setText(R.string.pocketknife_choose);
-                map.setText(R.string.pickaxe_choose);
+                rope.setText(R.string.pocketknife_choose);
+                torches.setText(R.string.pickaxe_choose);
+                map.setVisibility(GONE);
                 pendant.setVisibility(GONE);
+                gasolineLayout.setVisibility(VISIBLE);
 
                 if (globalVariables.Investigators.get(currentInvestigator).Supplies % 3 == 0) {
                     blanket.setVisibility(GONE);
@@ -410,16 +460,14 @@ public class ChooseSuppliesActivity extends AppCompatActivity {
             if (globalVariables.CurrentScenario == 9) {
                 switch (buttonView.getId()) {
                     case R.id.rope:
-                        // Gasoline
-                        points = 1;
-                        break;
-                    case R.id.torches:
                         // Pocketknife
                         points = 2;
+                        array = 31;
                         break;
-                    case R.id.map:
+                    case R.id.torches:
                         // Pickaxe
                         points = 2;
+                        array = 37;
                         break;
                 }
             }
