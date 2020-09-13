@@ -354,6 +354,10 @@ public class LoadCampaignActivity extends AppCompatActivity {
                     CampaignEntry.COLUMN_PRESTON_INUSE,
                     CampaignEntry.COLUMN_DIANA_INUSE,
                     CampaignEntry.COLUMN_RITA_INUSE,
+                    CampaignEntry.COLUMN_GAVRIELLA_INUSE,
+                    CampaignEntry.COLUMN_JEROME_INUSE,
+                    CampaignEntry.COLUMN_PENNY_INUSE,
+                    CampaignEntry.COLUMN_VALENTINO_INUSE,
                     CampaignEntry.COLUMN_TOMMY_INUSE,
                     CampaignEntry.COLUMN_MANDY_INUSE,
                     CampaignEntry.COLUMN_TONY_INUSE,
@@ -453,6 +457,14 @@ public class LoadCampaignActivity extends AppCompatActivity {
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_PRESTON_INUSE));
                 globalVariables.InvestigatorsInUse[Investigator.RITA_YOUNG] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_RITA_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.GAVRIELLA_MIZRAH] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_GAVRIELLA_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.JEROME_DAVIDS] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_JEROME_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.PENNY_WHITE] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_PENNY_INUSE));
+                globalVariables.InvestigatorsInUse[Investigator.VALENTINO_RIVAS] = campaignCursor.getInt(campaignCursor
+                        .getColumnIndexOrThrow(CampaignEntry.COLUMN_VALENTINO_INUSE));
                 globalVariables.InvestigatorsInUse[Investigator.TOMMY_MULDOON] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_TOMMY_INUSE));
                 globalVariables.InvestigatorsInUse[Investigator.MANDY_THOMPSON] = campaignCursor.getInt(campaignCursor

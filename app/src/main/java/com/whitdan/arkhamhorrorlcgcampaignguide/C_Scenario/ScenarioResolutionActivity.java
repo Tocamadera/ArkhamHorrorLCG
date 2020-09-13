@@ -4289,6 +4289,14 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                 .DIANA_STANLEY]);
         campaignValues.put(CampaignEntry.COLUMN_RITA_INUSE, globalVariables.InvestigatorsInUse[Investigator
                 .RITA_YOUNG]);
+        campaignValues.put(CampaignEntry.COLUMN_GAVRIELLA_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .GAVRIELLA_MIZRAH]);
+        campaignValues.put(CampaignEntry.COLUMN_JEROME_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .JEROME_DAVIDS]);
+        campaignValues.put(CampaignEntry.COLUMN_PENNY_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .PENNY_WHITE]);
+        campaignValues.put(CampaignEntry.COLUMN_VALENTINO_INUSE, globalVariables.InvestigatorsInUse[Investigator
+                .VALENTINO_RIVAS]);
         campaignValues.put(CampaignEntry.COLUMN_TOMMY_INUSE, globalVariables.InvestigatorsInUse[Investigator
                 .TOMMY_MULDOON]);
         campaignValues.put(CampaignEntry.COLUMN_MANDY_INUSE, globalVariables.InvestigatorsInUse[Investigator

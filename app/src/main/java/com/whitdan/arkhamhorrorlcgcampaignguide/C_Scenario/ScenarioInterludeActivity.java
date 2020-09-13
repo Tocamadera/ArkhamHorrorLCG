@@ -974,6 +974,9 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
         });
         Button continueButton = findViewById(R.id.continue_button);
         continueButton.setTypeface(teutonic);
+        if (globalVariables.CurrentCampaign == 5 && globalVariables.CurrentScenario == 0){
+            continueButton.setText(R.string.introduction);
+        }
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1026,6 +1029,8 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                             }
                             break;
                     }
+                } else if (globalVariables.CurrentCampaign == 5 && globalVariables.InvestigatorNames.size() == 0){
+                    progress = false;
                 }
 
                 if (progress) {
@@ -1063,10 +1068,13 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         }
                     }
                     startActivity(intent);
-                } else
-
-                {
-                    Toast toast = Toast.makeText(getBaseContext(), R.string.must_option, Toast.LENGTH_SHORT);
+                } else {
+                    Toast toast;
+                    if (globalVariables.CurrentCampaign == 5 && globalVariables.InvestigatorNames.size() == 0){
+                        toast = Toast.makeText(getBaseContext(), R.string.must_investigator, Toast.LENGTH_SHORT);
+                    } else {
+                        toast = Toast.makeText(getBaseContext(), R.string.must_option, Toast.LENGTH_SHORT);
+                    }
                     toast.show();
                 }
             }

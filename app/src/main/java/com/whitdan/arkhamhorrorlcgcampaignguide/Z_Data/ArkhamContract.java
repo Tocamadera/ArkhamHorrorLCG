@@ -58,6 +58,10 @@ public class ArkhamContract {
         public static final String COLUMN_PRESTON_INUSE = "preston";
         public static final String COLUMN_DIANA_INUSE = "diana";
         public static final String COLUMN_RITA_INUSE = "rita";
+        public static final String COLUMN_GAVRIELLA_INUSE ="gavriella";
+        public static final String COLUMN_JEROME_INUSE ="jerome";
+        public static final String COLUMN_PENNY_INUSE ="penny";
+        public static final String COLUMN_VALENTINO_INUSE ="valentino";
         public static final String COLUMN_TOMMY_INUSE = "tommy";
         public static final String COLUMN_MANDY_INUSE = "mandy";
         public static final String COLUMN_TONY_INUSE = "tony";
